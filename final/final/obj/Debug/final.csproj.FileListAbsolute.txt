@@ -1,1 +1,9 @@
 K:\Coding\DBS-Project\final\final\bin\Debug\final.exe.config
+K:\Coding\DBS-Project\final\final\bin\Debug\final.exe
+K:\Coding\DBS-Project\final\final\bin\Debug\final.pdb
+K:\Coding\DBS-Project\final\final\obj\Debug\final.csprojResolveAssemblyReference.cache
+K:\Coding\DBS-Project\final\final\obj\Debug\final.Form1.resources
+K:\Coding\DBS-Project\final\final\obj\Debug\final.Properties.Resources.resources
+K:\Coding\DBS-Project\final\final\obj\Debug\final.csproj.GenerateResource.Cache
+K:\Coding\DBS-Project\final\final\obj\Debug\final.exe
+K:\Coding\DBS-Project\final\final\obj\Debug\final.pdb
