@@ -19,7 +19,23 @@ namespace final
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //BackColor = Color.Aquamarine;
+        }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            Image myimage = new Bitmap(@"K:\Coding\DBS-Project\background.jpg");
+            BackgroundImage = myimage;
         }
     }
 }
