@@ -37,5 +37,17 @@ namespace final
             Image myimage = new Bitmap(@"K:\Coding\DBS-Project\background.jpg");
             BackgroundImage = myimage;
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var myForm = new Form2();
+            Hide();
+            myForm.Show();
+        }
     }
 }

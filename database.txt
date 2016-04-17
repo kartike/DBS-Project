@@ -1,0 +1,7 @@
+SQL> create table inventory(
+  2  PartID int primary key,
+  3  PartQty int,
+  4  PartName varchar(20),
+  5  PartOutCost numeric(7,2));
+
+  
