@@ -7,16 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
+
 
 namespace final
 {
     public partial class Form1 : Form
     {
+        OracleConnection conn;
+        OracleCommand comm;
+        OracleDataAdapter da;
+        DataSet ds;
+        DataTable dt;
+        DataRow dr;
+
         public Form1()
         {
             InitializeComponent();
         }
-
+        public void connectt()
+        {
+            string oradb = "Data Source=Kartike ; UserID= orcl;Password=Kartike123";
+            conn = new OracleConnection(oradb);
+            conn.Open();
+         }
         private void Form1_Load(object sender, EventArgs e)
         {
             //BackColor = Color.Aquamarine;
@@ -45,9 +60,14 @@ namespace final
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var myForm = new Form2();
+            var f2 = new Form2();
             Hide();
-            myForm.Show();
+            f2.ShowDialog();
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -21,5 +21,12 @@ namespace final
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var f1 = new Form1();
+            Hide();
+            f1.ShowDialog();
+        }
     }
 }
