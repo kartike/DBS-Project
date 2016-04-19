@@ -7,3 +7,4 @@ K:\Coding\DBS-Project\final\final\obj\Debug\final.Properties.Resources.resources
 K:\Coding\DBS-Project\final\final\obj\Debug\final.csproj.GenerateResource.Cache
 K:\Coding\DBS-Project\final\final\obj\Debug\final.exe
 K:\Coding\DBS-Project\final\final\obj\Debug\final.pdb
+K:\Coding\DBS-Project\final\final\bin\Debug\Oracle.DataAccess.dll
