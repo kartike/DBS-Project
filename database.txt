@@ -1,7 +1,22 @@
-SQL> create table inventory(
-  2  PartID int primary key,
-  3  PartQty int,
-  4  PartName varchar(20),
-  5  PartOutCost numeric(7,2));
+connect: orcl
+
+create table inventory(
+PartID int primary key,
+PartQty int,
+PartName varchar(20),
+PartOutCost numeric(7,2)
+);
+
+insert into inventory values (3312,2,'Brush',235.22);
 
   
+
+create table employee(
+employeeID int primary key,
+name varchar(20),
+mobile int,
+email varchar(25),
+address varchar(25),
+taskcount int,
+engg int
+);

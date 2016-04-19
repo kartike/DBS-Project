@@ -7,14 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
 
 namespace final
 {
     public partial class Form2 : Form
     {
+        OracleConnection conn;
+        OracleCommand comm;
+        OracleDataAdapter da;
+        DataSet ds;
+        DataTable dt;
+        DataRow dr;
+
         public Form2()
         {
             InitializeComponent();
+        }
+        public void connectt()
+        {
+            string oradb = "Data Source=Kartike;User ID=orcl;Password=Kartike123";
+            conn = new OracleConnection(oradb);
+            conn.Open();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -27,6 +42,36 @@ namespace final
             var f1 = new Form1();
             Hide();
             f1.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            connectt();
+            Random rnd = new Random();
+            int empid = rnd.Next(1000000,9999999);
+            long mob= 9999999999;
+            mob = long.Parse(textBox2.Text);
+            int engg = 0;
+
+            if(radioButton1.Checked==true)
+            {
+                engg = 1;
+            }
+            else if(radioButton2.Checked==true)
+            {
+                engg = 0;
+            }
+            string empp = empid.ToString();
+            OracleCommand cm = new OracleCommand();
+            cm.Connection = conn;
+            cm.CommandText = "insert into employee values('"+ empp + "' ,'" + textBox1.Text + "','" +mob + "' ,'"+textBox3.Text + "' ,'"+ textBox4.Text + "','"+ 0 + "','"+ engg +"' )";
+
+            cm.ExecuteNonQuery();
+            MessageBox.Show("New Employee Added!");
+            cm.CommandText = "commit";
+            cm.ExecuteNonQuery();
+            MessageBox.Show("Commit done");
+            conn.Close();
         }
     }
 }

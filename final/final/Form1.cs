@@ -28,10 +28,10 @@ namespace final
         }
         public void connectt()
         {
-            string oradb = "Data Source=Kartike ; UserID= orcl;Password=Kartike123";
+            string oradb = "Data Source=Kartike;UserID=orcl;Password=Kartike123;Unicode=True";
             conn = new OracleConnection(oradb);
             conn.Open();
-         }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             //BackColor = Color.Aquamarine;
