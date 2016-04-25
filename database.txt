@@ -7,8 +7,6 @@ PartName varchar(20),
 PartOutCost numeric(7,2)
 );
 
-insert into inventory values (3312,2,'Brush',235.22);
-
   
 
 create table employee(
@@ -19,4 +17,24 @@ email varchar(25),
 address varchar(25),
 taskcount int,
 engg int
+);
+
+
+create table work(
+jobid int primary key,
+productid int,
+custname varchar(20),
+address varchar(30),
+mobile int ,
+email varchar(20),
+indate date ,
+outdate date,
+estcost int ,
+employeeid int references employee
+);
+
+
+create table work_part(
+jobid int primary key references work,
+partid references inventory
 );

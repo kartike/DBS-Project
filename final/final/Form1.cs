@@ -34,6 +34,8 @@ namespace final
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.WORK' table. You can move, or remove it, as needed.
+            this.wORKTableAdapter.Fill(this.dataSet1.WORK);
             //BackColor = Color.Aquamarine;
         }
 

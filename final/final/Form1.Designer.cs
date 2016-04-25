@@ -28,8 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -43,17 +53,25 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataSet1 = new final.DataSet1();
+            this.wORKBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wORKTableAdapter = new final.DataSet1TableAdapters.WORKTableAdapter();
+            this.jOBIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRODUCTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cUSTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aDDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mOBILEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iNDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oUTDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eSTCOSTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eMPLOYEEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wORKBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -86,6 +104,89 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Job Card";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.button4.Location = new System.Drawing.Point(131, 349);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "Submit";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.textBox9.Location = new System.Drawing.Point(131, 311);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(161, 22);
+            this.textBox9.TabIndex = 17;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.textBox8.Location = new System.Drawing.Point(131, 281);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(161, 22);
+            this.textBox8.TabIndex = 16;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.textBox7.Location = new System.Drawing.Point(131, 247);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(161, 22);
+            this.textBox7.TabIndex = 15;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.textBox6.Location = new System.Drawing.Point(131, 210);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(161, 22);
+            this.textBox6.TabIndex = 14;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.textBox5.Location = new System.Drawing.Point(131, 178);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(161, 22);
+            this.textBox5.TabIndex = 13;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.textBox4.Location = new System.Drawing.Point(131, 150);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(161, 22);
+            this.textBox4.TabIndex = 12;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.textBox3.Location = new System.Drawing.Point(131, 116);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(161, 22);
+            this.textBox3.TabIndex = 11;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.textBox2.Location = new System.Drawing.Point(131, 87);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(161, 22);
+            this.textBox2.TabIndex = 10;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.textBox1.Location = new System.Drawing.Point(131, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(161, 22);
+            this.textBox1.TabIndex = 9;
             // 
             // label9
             // 
@@ -220,95 +321,116 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "SerMaS";
             // 
-            // textBox1
+            // dataGridView1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(131, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 22);
-            this.textBox1.TabIndex = 9;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.jOBIDDataGridViewTextBoxColumn,
+            this.pRODUCTIDDataGridViewTextBoxColumn,
+            this.cUSTNAMEDataGridViewTextBoxColumn,
+            this.aDDRESSDataGridViewTextBoxColumn,
+            this.mOBILEDataGridViewTextBoxColumn,
+            this.eMAILDataGridViewTextBoxColumn,
+            this.iNDATEDataGridViewTextBoxColumn,
+            this.oUTDATEDataGridViewTextBoxColumn,
+            this.eSTCOSTDataGridViewTextBoxColumn,
+            this.eMPLOYEEIDDataGridViewTextBoxColumn,
+            this.dONEDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.wORKBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(474, 81);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(326, 150);
+            this.dataGridView1.TabIndex = 7;
             // 
-            // textBox2
+            // dataSet1
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.textBox2.Location = new System.Drawing.Point(131, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 22);
-            this.textBox2.TabIndex = 10;
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBox3
+            // wORKBindingSource
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.textBox3.Location = new System.Drawing.Point(131, 116);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 22);
-            this.textBox3.TabIndex = 11;
+            this.wORKBindingSource.DataMember = "WORK";
+            this.wORKBindingSource.DataSource = this.dataSet1;
             // 
-            // textBox4
+            // wORKTableAdapter
             // 
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.textBox4.Location = new System.Drawing.Point(131, 150);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 22);
-            this.textBox4.TabIndex = 12;
+            this.wORKTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox5
+            // jOBIDDataGridViewTextBoxColumn
             // 
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.textBox5.Location = new System.Drawing.Point(131, 178);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(161, 22);
-            this.textBox5.TabIndex = 13;
+            this.jOBIDDataGridViewTextBoxColumn.DataPropertyName = "JOBID";
+            this.jOBIDDataGridViewTextBoxColumn.HeaderText = "JOBID";
+            this.jOBIDDataGridViewTextBoxColumn.Name = "jOBIDDataGridViewTextBoxColumn";
             // 
-            // textBox6
+            // pRODUCTIDDataGridViewTextBoxColumn
             // 
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.textBox6.Location = new System.Drawing.Point(131, 210);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(161, 22);
-            this.textBox6.TabIndex = 14;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.pRODUCTIDDataGridViewTextBoxColumn.DataPropertyName = "PRODUCTID";
+            this.pRODUCTIDDataGridViewTextBoxColumn.HeaderText = "PRODUCTID";
+            this.pRODUCTIDDataGridViewTextBoxColumn.Name = "pRODUCTIDDataGridViewTextBoxColumn";
             // 
-            // textBox7
+            // cUSTNAMEDataGridViewTextBoxColumn
             // 
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.textBox7.Location = new System.Drawing.Point(131, 247);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(161, 22);
-            this.textBox7.TabIndex = 15;
+            this.cUSTNAMEDataGridViewTextBoxColumn.DataPropertyName = "CUSTNAME";
+            this.cUSTNAMEDataGridViewTextBoxColumn.HeaderText = "CUSTNAME";
+            this.cUSTNAMEDataGridViewTextBoxColumn.Name = "cUSTNAMEDataGridViewTextBoxColumn";
             // 
-            // textBox8
+            // aDDRESSDataGridViewTextBoxColumn
             // 
-            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.textBox8.Location = new System.Drawing.Point(131, 281);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(161, 22);
-            this.textBox8.TabIndex = 16;
+            this.aDDRESSDataGridViewTextBoxColumn.DataPropertyName = "ADDRESS";
+            this.aDDRESSDataGridViewTextBoxColumn.HeaderText = "ADDRESS";
+            this.aDDRESSDataGridViewTextBoxColumn.Name = "aDDRESSDataGridViewTextBoxColumn";
             // 
-            // textBox9
+            // mOBILEDataGridViewTextBoxColumn
             // 
-            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.textBox9.Location = new System.Drawing.Point(131, 311);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(161, 22);
-            this.textBox9.TabIndex = 17;
+            this.mOBILEDataGridViewTextBoxColumn.DataPropertyName = "MOBILE";
+            this.mOBILEDataGridViewTextBoxColumn.HeaderText = "MOBILE";
+            this.mOBILEDataGridViewTextBoxColumn.Name = "mOBILEDataGridViewTextBoxColumn";
             // 
-            // button4
+            // eMAILDataGridViewTextBoxColumn
             // 
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.button4.Location = new System.Drawing.Point(131, 349);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Submit";
-            this.button4.UseVisualStyleBackColor = true;
+            this.eMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL";
+            this.eMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL";
+            this.eMAILDataGridViewTextBoxColumn.Name = "eMAILDataGridViewTextBoxColumn";
+            // 
+            // iNDATEDataGridViewTextBoxColumn
+            // 
+            this.iNDATEDataGridViewTextBoxColumn.DataPropertyName = "INDATE";
+            this.iNDATEDataGridViewTextBoxColumn.HeaderText = "INDATE";
+            this.iNDATEDataGridViewTextBoxColumn.Name = "iNDATEDataGridViewTextBoxColumn";
+            // 
+            // oUTDATEDataGridViewTextBoxColumn
+            // 
+            this.oUTDATEDataGridViewTextBoxColumn.DataPropertyName = "OUTDATE";
+            this.oUTDATEDataGridViewTextBoxColumn.HeaderText = "OUTDATE";
+            this.oUTDATEDataGridViewTextBoxColumn.Name = "oUTDATEDataGridViewTextBoxColumn";
+            // 
+            // eSTCOSTDataGridViewTextBoxColumn
+            // 
+            this.eSTCOSTDataGridViewTextBoxColumn.DataPropertyName = "ESTCOST";
+            this.eSTCOSTDataGridViewTextBoxColumn.HeaderText = "ESTCOST";
+            this.eSTCOSTDataGridViewTextBoxColumn.Name = "eSTCOSTDataGridViewTextBoxColumn";
+            // 
+            // eMPLOYEEIDDataGridViewTextBoxColumn
+            // 
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.DataPropertyName = "EMPLOYEEID";
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.HeaderText = "EMPLOYEEID";
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.Name = "eMPLOYEEIDDataGridViewTextBoxColumn";
+            // 
+            // dONEDataGridViewTextBoxColumn
+            // 
+            this.dONEDataGridViewTextBoxColumn.DataPropertyName = "DONE";
+            this.dONEDataGridViewTextBoxColumn.HeaderText = "DONE";
+            this.dONEDataGridViewTextBoxColumn.Name = "dONEDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.OrangeRed;
             this.ClientSize = new System.Drawing.Size(844, 481);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -319,6 +441,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wORKBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,6 +474,21 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource wORKBindingSource;
+        private DataSet1TableAdapters.WORKTableAdapter wORKTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jOBIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRODUCTIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aDDRESSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mOBILEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eMAILDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iNDATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oUTDATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eSTCOSTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eMPLOYEEIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dONEDataGridViewTextBoxColumn;
     }
 }
 

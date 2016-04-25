@@ -48,7 +48,7 @@ namespace final
         {
             connectt();
             Random rnd = new Random();
-            int empid = rnd.Next(1000000,9999999);
+            int empid = rnd.Next(10000000,99999999);
             long mob= 9999999999;
             mob = long.Parse(textBox2.Text);
             int engg = 0;
@@ -72,6 +72,19 @@ namespace final
             cm.ExecuteNonQuery();
             MessageBox.Show("Commit done");
             conn.Close();
+            this.eMPLOYEETableAdapter.Fill(this.dataSet1.EMPLOYEE);
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet1.EMPLOYEE' table. You can move, or remove it, as needed.
+            this.eMPLOYEETableAdapter.Fill(this.dataSet1.EMPLOYEE);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
