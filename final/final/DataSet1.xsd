@@ -88,7 +88,37 @@
               <Mapping SourceColumn="TASKCOUNT" DataSetColumn="TASKCOUNT" />
               <Mapping SourceColumn="ENGG" DataSetColumn="ENGG" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="ORCL.EMPLOYEE" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        EMPLOYEEID, NAME, MOBILE, EMAIL, ADDRESS, TASKCOUNT, ENGG
+FROM            EMPLOYEE
+WHERE        (ENGG = 1)
+ORDER BY TASKCOUNT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="ORCL.EMPLOYEE" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EMPLOYEEID, NAME, MOBILE, EMAIL, ADDRESS, TASKCOUNT, ENGG FROM ORCL.EMPLOYEE WHERE ENGG=1 ORDER BY TASKCOUNT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="ORCL.EMPLOYEE" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EMPLOYEEID, NAME, MOBILE, EMAIL, ADDRESS, TASKCOUNT, ENGG FROM ORCL.EMPLOYEE
+WHERE        (ENGG = 1)
+ORDER BY TASKCOUNT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="INVENTORYTableAdapter" GeneratorDataComponentClassName="INVENTORYTableAdapter" Name="INVENTORY" UserDataComponentName="INVENTORYTableAdapter">
             <MainSource>
@@ -388,7 +418,7 @@
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="EMPLOYEE" msprop:Generator_TableClassName="EMPLOYEEDataTable" msprop:Generator_TableVarName="tableEMPLOYEE" msprop:Generator_TablePropName="EMPLOYEE" msprop:Generator_RowDeletingName="EMPLOYEERowDeleting" msprop:Generator_RowChangingName="EMPLOYEERowChanging" msprop:Generator_RowEvHandlerName="EMPLOYEERowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLOYEERowDeleted" msprop:Generator_UserTableName="EMPLOYEE" msprop:Generator_RowChangedName="EMPLOYEERowChanged" msprop:Generator_RowEvArgName="EMPLOYEERowChangeEvent" msprop:Generator_RowClassName="EMPLOYEERow">
+        <xs:element name="EMPLOYEE" msprop:Generator_TableClassName="EMPLOYEEDataTable" msprop:Generator_TableVarName="tableEMPLOYEE" msprop:Generator_RowChangedName="EMPLOYEERowChanged" msprop:Generator_TablePropName="EMPLOYEE" msprop:Generator_RowDeletingName="EMPLOYEERowDeleting" msprop:Generator_RowChangingName="EMPLOYEERowChanging" msprop:Generator_RowEvHandlerName="EMPLOYEERowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLOYEERowDeleted" msprop:Generator_RowClassName="EMPLOYEERow" msprop:Generator_UserTableName="EMPLOYEE" msprop:Generator_RowEvArgName="EMPLOYEERowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EMPLOYEEID" msprop:Generator_ColumnVarNameInTable="columnEMPLOYEEID" msprop:Generator_ColumnPropNameInRow="EMPLOYEEID" msprop:Generator_ColumnPropNameInTable="EMPLOYEEIDColumn" msprop:Generator_UserColumnName="EMPLOYEEID" type="xs:decimal" />
@@ -419,7 +449,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="INVENTORY" msprop:Generator_TableClassName="INVENTORYDataTable" msprop:Generator_TableVarName="tableINVENTORY" msprop:Generator_TablePropName="INVENTORY" msprop:Generator_RowDeletingName="INVENTORYRowDeleting" msprop:Generator_RowChangingName="INVENTORYRowChanging" msprop:Generator_RowEvHandlerName="INVENTORYRowChangeEventHandler" msprop:Generator_RowDeletedName="INVENTORYRowDeleted" msprop:Generator_UserTableName="INVENTORY" msprop:Generator_RowChangedName="INVENTORYRowChanged" msprop:Generator_RowEvArgName="INVENTORYRowChangeEvent" msprop:Generator_RowClassName="INVENTORYRow">
+        <xs:element name="INVENTORY" msprop:Generator_TableClassName="INVENTORYDataTable" msprop:Generator_TableVarName="tableINVENTORY" msprop:Generator_RowChangedName="INVENTORYRowChanged" msprop:Generator_TablePropName="INVENTORY" msprop:Generator_RowDeletingName="INVENTORYRowDeleting" msprop:Generator_RowChangingName="INVENTORYRowChanging" msprop:Generator_RowEvHandlerName="INVENTORYRowChangeEventHandler" msprop:Generator_RowDeletedName="INVENTORYRowDeleted" msprop:Generator_RowClassName="INVENTORYRow" msprop:Generator_UserTableName="INVENTORY" msprop:Generator_RowEvArgName="INVENTORYRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PARTID" msprop:Generator_ColumnVarNameInTable="columnPARTID" msprop:Generator_ColumnPropNameInRow="PARTID" msprop:Generator_ColumnPropNameInTable="PARTIDColumn" msprop:Generator_UserColumnName="PARTID" type="xs:decimal" />
@@ -435,7 +465,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="REQUEST" msprop:Generator_TableClassName="REQUESTDataTable" msprop:Generator_TableVarName="tableREQUEST" msprop:Generator_TablePropName="REQUEST" msprop:Generator_RowDeletingName="REQUESTRowDeleting" msprop:Generator_RowChangingName="REQUESTRowChanging" msprop:Generator_RowEvHandlerName="REQUESTRowChangeEventHandler" msprop:Generator_RowDeletedName="REQUESTRowDeleted" msprop:Generator_UserTableName="REQUEST" msprop:Generator_RowChangedName="REQUESTRowChanged" msprop:Generator_RowEvArgName="REQUESTRowChangeEvent" msprop:Generator_RowClassName="REQUESTRow">
+        <xs:element name="REQUEST" msprop:Generator_TableClassName="REQUESTDataTable" msprop:Generator_TableVarName="tableREQUEST" msprop:Generator_RowChangedName="REQUESTRowChanged" msprop:Generator_TablePropName="REQUEST" msprop:Generator_RowDeletingName="REQUESTRowDeleting" msprop:Generator_RowChangingName="REQUESTRowChanging" msprop:Generator_RowEvHandlerName="REQUESTRowChangeEventHandler" msprop:Generator_RowDeletedName="REQUESTRowDeleted" msprop:Generator_RowClassName="REQUESTRow" msprop:Generator_UserTableName="REQUEST" msprop:Generator_RowEvArgName="REQUESTRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PARTID" msprop:Generator_ColumnVarNameInTable="columnPARTID" msprop:Generator_ColumnPropNameInRow="PARTID" msprop:Generator_ColumnPropNameInTable="PARTIDColumn" msprop:Generator_UserColumnName="PARTID" type="xs:decimal" />
@@ -446,7 +476,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="WORK" msprop:Generator_TableClassName="WORKDataTable" msprop:Generator_TableVarName="tableWORK" msprop:Generator_TablePropName="WORK" msprop:Generator_RowDeletingName="WORKRowDeleting" msprop:Generator_RowChangingName="WORKRowChanging" msprop:Generator_RowEvHandlerName="WORKRowChangeEventHandler" msprop:Generator_RowDeletedName="WORKRowDeleted" msprop:Generator_UserTableName="WORK" msprop:Generator_RowChangedName="WORKRowChanged" msprop:Generator_RowEvArgName="WORKRowChangeEvent" msprop:Generator_RowClassName="WORKRow">
+        <xs:element name="WORK" msprop:Generator_TableClassName="WORKDataTable" msprop:Generator_TableVarName="tableWORK" msprop:Generator_RowChangedName="WORKRowChanged" msprop:Generator_TablePropName="WORK" msprop:Generator_RowDeletingName="WORKRowDeleting" msprop:Generator_RowChangingName="WORKRowChanging" msprop:Generator_RowEvHandlerName="WORKRowChangeEventHandler" msprop:Generator_RowDeletedName="WORKRowDeleted" msprop:Generator_RowClassName="WORKRow" msprop:Generator_UserTableName="WORK" msprop:Generator_RowEvArgName="WORKRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="JOBID" msprop:Generator_ColumnVarNameInTable="columnJOBID" msprop:Generator_ColumnPropNameInRow="JOBID" msprop:Generator_ColumnPropNameInTable="JOBIDColumn" msprop:Generator_UserColumnName="JOBID" type="xs:decimal" />
@@ -481,7 +511,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="WORK_PART" msprop:Generator_TableClassName="WORK_PARTDataTable" msprop:Generator_TableVarName="tableWORK_PART" msprop:Generator_TablePropName="WORK_PART" msprop:Generator_RowDeletingName="WORK_PARTRowDeleting" msprop:Generator_RowChangingName="WORK_PARTRowChanging" msprop:Generator_RowEvHandlerName="WORK_PARTRowChangeEventHandler" msprop:Generator_RowDeletedName="WORK_PARTRowDeleted" msprop:Generator_UserTableName="WORK_PART" msprop:Generator_RowChangedName="WORK_PARTRowChanged" msprop:Generator_RowEvArgName="WORK_PARTRowChangeEvent" msprop:Generator_RowClassName="WORK_PARTRow">
+        <xs:element name="WORK_PART" msprop:Generator_TableClassName="WORK_PARTDataTable" msprop:Generator_TableVarName="tableWORK_PART" msprop:Generator_RowChangedName="WORK_PARTRowChanged" msprop:Generator_TablePropName="WORK_PART" msprop:Generator_RowDeletingName="WORK_PARTRowDeleting" msprop:Generator_RowChangingName="WORK_PARTRowChanging" msprop:Generator_RowEvHandlerName="WORK_PARTRowChangeEventHandler" msprop:Generator_RowDeletedName="WORK_PARTRowDeleted" msprop:Generator_RowClassName="WORK_PARTRow" msprop:Generator_UserTableName="WORK_PART" msprop:Generator_RowEvArgName="WORK_PARTRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="JOBID" msprop:Generator_ColumnVarNameInTable="columnJOBID" msprop:Generator_ColumnPropNameInRow="JOBID" msprop:Generator_ColumnPropNameInTable="JOBIDColumn" msprop:Generator_UserColumnName="JOBID" type="xs:decimal" />
@@ -514,9 +544,9 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="SYS_C007271" msdata:parent="EMPLOYEE" msdata:child="WORK" msdata:parentkey="EMPLOYEEID" msdata:childkey="EMPLOYEEID" msprop:Generator_UserChildTable="WORK" msprop:Generator_ChildPropName="GetWORKRows" msprop:Generator_UserRelationName="SYS_C007271" msprop:Generator_ParentPropName="EMPLOYEERow" msprop:Generator_RelationVarName="relationSYS_C007271" msprop:Generator_UserParentTable="EMPLOYEE" />
-      <msdata:Relationship name="SYS_C007273" msdata:parent="WORK" msdata:child="WORK_PART" msdata:parentkey="JOBID" msdata:childkey="JOBID" msprop:Generator_UserChildTable="WORK_PART" msprop:Generator_ChildPropName="GetWORK_PARTRows" msprop:Generator_UserRelationName="SYS_C007273" msprop:Generator_ParentPropName="WORKRow" msprop:Generator_RelationVarName="relationSYS_C007273" msprop:Generator_UserParentTable="WORK" />
-      <msdata:Relationship name="SYS_C007274" msdata:parent="INVENTORY" msdata:child="WORK_PART" msdata:parentkey="PARTID" msdata:childkey="PARTID" msprop:Generator_UserChildTable="WORK_PART" msprop:Generator_ChildPropName="GetWORK_PARTRows" msprop:Generator_UserRelationName="SYS_C007274" msprop:Generator_ParentPropName="INVENTORYRow" msprop:Generator_RelationVarName="relationSYS_C007274" msprop:Generator_UserParentTable="INVENTORY" />
+      <msdata:Relationship name="SYS_C007271" msdata:parent="EMPLOYEE" msdata:child="WORK" msdata:parentkey="EMPLOYEEID" msdata:childkey="EMPLOYEEID" msprop:Generator_UserChildTable="WORK" msprop:Generator_ChildPropName="GetWORKRows" msprop:Generator_UserRelationName="SYS_C007271" msprop:Generator_RelationVarName="relationSYS_C007271" msprop:Generator_UserParentTable="EMPLOYEE" msprop:Generator_ParentPropName="EMPLOYEERow" />
+      <msdata:Relationship name="SYS_C007273" msdata:parent="WORK" msdata:child="WORK_PART" msdata:parentkey="JOBID" msdata:childkey="JOBID" msprop:Generator_UserChildTable="WORK_PART" msprop:Generator_ChildPropName="GetWORK_PARTRows" msprop:Generator_UserRelationName="SYS_C007273" msprop:Generator_RelationVarName="relationSYS_C007273" msprop:Generator_UserParentTable="WORK" msprop:Generator_ParentPropName="WORKRow" />
+      <msdata:Relationship name="SYS_C007274" msdata:parent="INVENTORY" msdata:child="WORK_PART" msdata:parentkey="PARTID" msdata:childkey="PARTID" msprop:Generator_UserChildTable="WORK_PART" msprop:Generator_ChildPropName="GetWORK_PARTRows" msprop:Generator_UserRelationName="SYS_C007274" msprop:Generator_RelationVarName="relationSYS_C007274" msprop:Generator_UserParentTable="INVENTORY" msprop:Generator_ParentPropName="INVENTORYRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

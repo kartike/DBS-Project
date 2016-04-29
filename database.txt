@@ -1,4 +1,4 @@
-connect: orcl
+﻿connect: orcl
 
 create table inventory(
 PartID int primary key,
@@ -30,11 +30,63 @@ email varchar(20),
 indate date ,
 outdate date,
 estcost int ,
-employeeid int references employee
+employeeid int references employee,
+done int
 );
 
 
 create table work_part(
-jobid int primary key references work,
-partid references inventory
+jobid int references work,
+partid references inventory,
+primary key(jobid , partid)
 );
+
+
+create table request(
+partid int primary key,
+QtyOrdered int ,
+PartInCost int,
+ReqDate date,
+EstInDate date);
+
+
+
+
+
+
+create or replace TRIGGER update_emp
+AFTER INSERT ON WORK
+ FOR EACH ROW
+ DECLARE
+   tsk int ;
+ BEGIN
+     SELECT EMPLOYEE.TASKCOUNT into tsk
+     from EMPLOYEE
+     where EMPLOYEE.EMPLOYEEID = :new.employeeid;
+tsk:= 1 + tsk;
+    UPDATE EMPLOYEE
+    SET TASKCOUNT = tsk
+    where EMPLOYEE.EMPLOYEEID = :new.employeeid;
+END;​
+/
+
+
+create or replace TRIGGER update_cost
+AFTER INSERT on WORK_PART
+FOR EACH ROW
+DECLARE
+  initialcost numeric(7,2);
+  partcost numeric(7,2);
+BEGIN
+   select estcost into initialcost
+   from work
+   where work.jobid = :new.jobid;
+   select PartOutCost into partcost
+   from inventory
+   where inventory.partid=:new.partid;
+  initialcost := initialcost+partcost;
+update work
+set estcost = initialcost
+where work.jobid = :new.jobid;
+end;​
+/

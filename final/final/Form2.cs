@@ -15,12 +15,12 @@ namespace final
     public partial class Form2 : Form
     {
         OracleConnection conn;
-        OracleCommand comm;
+        /*OracleCommand comm;
         OracleDataAdapter da;
         DataSet ds;
         DataTable dt;
         DataRow dr;
-
+        */
         public Form2()
         {
             InitializeComponent();
@@ -78,8 +78,7 @@ namespace final
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet1.EMPLOYEE' table. You can move, or remove it, as needed.
-            this.eMPLOYEETableAdapter.Fill(this.dataSet1.EMPLOYEE);
-
+            eMPLOYEETableAdapter.Fill(dataSet1.EMPLOYEE);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

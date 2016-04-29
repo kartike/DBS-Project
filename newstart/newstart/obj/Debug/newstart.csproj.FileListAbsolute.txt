@@ -1,0 +1,15 @@
+K:\Coding\DBS-Project\newstart\newstart\bin\Debug\newstart.exe.config
+K:\Coding\DBS-Project\newstart\newstart\bin\Debug\newstart.exe
+K:\Coding\DBS-Project\newstart\newstart\bin\Debug\newstart.pdb
+K:\Coding\DBS-Project\newstart\newstart\obj\Debug\newstart.Form1.resources
+K:\Coding\DBS-Project\newstart\newstart\obj\Debug\newstart.Properties.Resources.resources
+K:\Coding\DBS-Project\newstart\newstart\obj\Debug\newstart.csproj.GenerateResource.Cache
+K:\Coding\DBS-Project\newstart\newstart\obj\Debug\newstart.exe
+K:\Coding\DBS-Project\newstart\newstart\obj\Debug\newstart.pdb
+K:\Coding\DBS-Project\newstart\newstart\obj\Debug\newstart.csprojResolveAssemblyReference.cache
+K:\Coding\DBS-Project\newstart\newstart\obj\Debug\newstart.Form2.resources
+K:\Coding\DBS-Project\newstart\newstart\bin\Debug\Oracle.DataAccess.dll
+K:\Coding\DBS-Project\newstart\newstart\obj\Debug\newstart.Form3.resources
+K:\Coding\DBS-Project\newstart\newstart\bin\Debug\itextsharp.dll
+K:\Coding\DBS-Project\newstart\newstart\bin\Debug\itextsharp.xml
+K:\Coding\DBS-Project\newstart\newstart\obj\Debug\newstart.Form4.resources
